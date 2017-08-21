@@ -1,10 +1,12 @@
 import { compose, applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk'
+import { createLogger } from 'redux-logger'
 
 import reducer from './reducer'
 
+
 const composedStore = compose(
-  applyMiddleware(thunk),
+  applyMiddleware(thunk, createLogger()),
   __CLIENT__ && window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore)
 
