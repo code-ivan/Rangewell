@@ -26,6 +26,6 @@ global.webpackTools = new WebpackTools(webpackToolsConfig)
     const server = require(basePath)
 
     server.listen(3000, () => {
-      console.info('Server is running!') // eslint-disable-line no-console
+      console.info('Server is running! http://localhost:3000/') // eslint-disable-line no-console
     })
   })

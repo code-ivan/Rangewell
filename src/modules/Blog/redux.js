@@ -27,7 +27,6 @@ const article = (state = null, action) => {
   case FETCH_ARTICLE_FAILURE:
     return null
   }
-
   return state
 }
 

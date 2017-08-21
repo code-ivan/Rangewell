@@ -4,7 +4,10 @@ import Helmet from 'react-helmet'
 
 const Home = () => (
   <main>
-    <Helmet title="Home" />
+    {/* Use Helmet for all meta tag */}
+    <Helmet title="Home">
+      <meta name="description" content="Home description" />
+    </Helmet>
     <h1>Home</h1>
   </main>
 )

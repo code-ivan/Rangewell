@@ -1,5 +1,5 @@
 // @flow
-import { App, Home, Blog, BlogIndex, BlogArticle, NotFound } from './modules'
+import { App, Home, Blog, BlogIndex, BlogArticle, NotFound, Landing } from './modules'
 
 const routes = [
   {
@@ -26,6 +26,18 @@ const routes = [
           },
           {
             component: NotFound
+          }
+        ]
+      },
+      {
+        path: '/landing',
+        component: Landing,
+        exact: true,
+        routes: [
+          {
+            path: '/landing/:slug',
+            component: BlogArticle,
+            exact: true
           }
         ]
       },
